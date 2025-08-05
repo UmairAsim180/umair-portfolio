@@ -1,9 +1,15 @@
 "use client";
 import { TailwindBtn } from "@/Components/TailwindBtn";
 import { Sun } from "lucide-react";
+import { useEffect } from "react";
+
 
 
 export default function Home() {
+  // useEffect(() => {
+  //   alert('Under Construction')
+  // }, [])
+
   return (
     <>
       {/* <div className="absolute inset-0 -z-10 size-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" /> */}
@@ -11,11 +17,11 @@ export default function Home() {
       <nav className="flex p-8 justify-evenly items-center">
         <span className="font-script font-bold text-2xl">Umair</span>
         <ul className="flex gap-5 font-inter">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">About</li>
-          <li className="cursor-pointer">Projects</li>
-          <li className="cursor-pointer">Services</li>
-          <li className="cursor-pointer">Resume</li>
+          <li className="cursor-pointer hover:text-[#5fabb9] hover:scale-x-105">Home</li>
+          <li className="cursor-pointer hover:text-[#5fabb9] hover:scale-x-105">About</li>
+          <li className="cursor-pointer hover:text-[#5fabb9] hover:scale-x-105">Projects</li>
+          <li className="cursor-pointer hover:text-[#5fabb9] hover:scale-x-105">Services</li>
+          <li className="cursor-pointer hover:text-[#5fabb9] hover:scale-x-105">Resume</li>
         </ul>
         <TailwindBtn text='Contact Us' />
       </nav>
@@ -38,11 +44,11 @@ export default function Home() {
         <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#d9d9d9] text-transparent bg-clip-text w-fit">
           Get to Know About us
         </span>
-        <span className=" my-8 text-center">Hi there! I'm [Your Name], a data scientist specializing in data analytics, predictive modeling, natural language processing, machine learning, and AI chatbots. With a passion for unraveling insights from complex datasets, I'm dedicated to helping businesses make informed decisions and stay ahead in today's data-driven world.
+        <span className=" my-8 text-center">Hi there! I\'m [Your Name], a data scientist specializing in data analytics, predictive modeling, natural language processing, machine learning, and AI chatbots. With a passion for unraveling insights from complex datasets, I\'m dedicated to helping businesses make informed decisions and stay ahead in today\'s data-driven world.
 
-          I bring a blend of technical expertise, hands-on experience, and a commitment to clear communication to every project. Whether it's uncovering hidden patterns, predicting future trends, or automating processes with AI, I'm here to help you harness the full potential of your data.
+          I bring a blend of technical expertise, hands-on experience, and a commitment to clear communication to every project. Whether it\'s uncovering hidden patterns, predicting future trends, or automating processes with AI, I\'m here to help you harness the full potential of your data.
 
-          Let's work together to transform your data into actionable insights that drive real results. Get in touch, and let's start unlocking the power of your data today!</span>
+          Let\'s work together to transform your data into actionable insights that drive real results. Get in touch, and let\'s start unlocking the power of your data today!</span>
         <TailwindBtn text={'Download Resume'} cssClass="w-fit" />
       </section>
 
@@ -134,7 +140,7 @@ export default function Home() {
           <input type="email" id="email" className="border border-zinc-500 rounded-md p-3 bg-transparent" placeholder="Your Email" />
           <label className="font-bold" htmlFor="message" >Message</label>
           <textarea id="message" className="border border-zinc-500 rounded-md p-3 h-32 bg-transparent" placeholder="Your Message"></textarea>
-          <button type="submit" className="bg-white text-black font-poppins font-semibold p-3 rounded-md">Send Message</button>
+          <TailwindBtn text={'Send Message'} />
         </form>
       </section>
       <footer>
@@ -145,7 +151,9 @@ export default function Home() {
               <img className="size-8 invert" src="/Facebook.svg" alt="Facebook" />
             </li>
             <li className="cursor-pointer">
-              <img className="size-8 invert" src="/Fiverr.svg" alt="Fiverr" />
+              <a href="https://www.fiverr.com/umairasim_1?source=gig_page">
+                <img className="size-8 invert" src="/Fiverr.svg" alt="Fiverr" />
+              </a>
             </li>
             <li className="cursor-pointer">
               <img className="size-8 invert" src="/Linkedin.svg" alt="Linkedin" />
