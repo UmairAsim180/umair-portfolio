@@ -118,7 +118,7 @@ export default function Home() {
         <div className="my-8 grid grid-cols-3">
           {/* Make a array map here  */}
           <div className="w-80 space-y-2">
-            <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/04/web-developer-portfolio.png" alt="" />
+            <img src="/Project1.png" alt="" />
             <h3 className="text-lg font-semibold">Project Name</h3>
             <span className="text-sm">Tech Used</span>
           </div>
