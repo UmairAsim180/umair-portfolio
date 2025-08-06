@@ -1,6 +1,7 @@
 import { Oleo_Script,Inter,Montserrat,Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import { Toaster } from "sonner";
 
 
 const oleoscript = Oleo_Script({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
           className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable}antialiased`}
         >
           {children}
+          <Toaster/>
         </body>
       </html>
     </>

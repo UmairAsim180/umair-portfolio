@@ -1,14 +1,12 @@
 "use client";
+import Contact from "@/Components/Contact";
 import { TailwindBtn } from "@/Components/TailwindBtn";
 import { Sun } from "lucide-react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 
 
 export default function Home() {
-  // useEffect(() => {
-  //   alert('Under Construction')
-  // }, [])
 
   return (
     <>
@@ -124,25 +122,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="w-[60%] min-h-[80vh] m-auto font-poppins mt-10 flex flex-col justify-start items-center relative p-6">
-        <h2 className="text-center text-white text-4xl font-extrabold">Get in Touch</h2>
-        <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#d9d9d9] text-transparent bg-clip-text w-fit">
-          Let us Work Together
-        </span>
-        <form
-          className="my-8 flex flex-col gap-2 justify-start w-4/5 text-white"
-          onSubmit={e => e.preventDefault()}
-        >
-          <label className="font-bold" htmlFor="name">Name</label>
-          <input type="text" id="name" className="border border-zinc-500 rounded-md p-3 bg-transparent" placeholder="Your Name" />
-          <label className="font-bold" htmlFor="email">Email</label>
-          <input type="email" id="email" className="border border-zinc-500 rounded-md p-3 bg-transparent" placeholder="Your Email" />
-          <label className="font-bold" htmlFor="message" >Message</label>
-          <textarea id="message" className="border border-zinc-500 rounded-md p-3 h-32 bg-transparent" placeholder="Your Message"></textarea>
-          <TailwindBtn text={'Send Message'} />
-        </form>
-      </section>
+      <Contact />
       <footer>
         <div className="w-[60%] m-auto flex justify-between items-center p-6">
           <span className="text-sm">© 2023 Umair Asim. All rights reserved.</span>
