@@ -28,24 +28,23 @@ const Contact = () => {
                 setForm({ name: '', email: '', message: '' });
                 toast.success(data.message)
             } else {
-                alert('Error submitting form');
+                toast.error(data.message)
             }
         }
         else {
-            // alert('Please enter a valid email from Gmail, Yahoo, or Outlook.')
             toast.warning('Please enter a valid email from Gmail, Yahoo, or Outlook.')
         }
         setLoading(false);
     }
 
     return (
-        <section className="w-[60%] min-h-[80vh] m-auto font-poppins mt-10 flex flex-col justify-start items-center relative p-6">
-            <h2 className="text-center text-white text-4xl font-extrabold">Get in Touch</h2>
-            <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+        <section className="md:w-[60%] min-h-[80vh] m-auto font-poppins mt-10 flex flex-col justify-start items-center relative p-6">
+            <h2 className="text-center text-4xl font-extrabold">Get in Touch</h2>
+            <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Let us Work Together
             </span>
             <form
-                className="my-8 flex flex-col gap-2 justify-start w-4/5 text-white"
+                className="my-8 flex flex-col gap-2 justify-start w-4/5"
                 onSubmit={handleSubmit}
             >
                 <label className="font-bold" htmlFor="name">Name</label>
