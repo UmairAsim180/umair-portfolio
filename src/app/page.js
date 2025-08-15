@@ -125,13 +125,16 @@ export default function Home() {
         <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
           Some of My Work
         </span>
-        <div className="my-8 md:grid grid-cols-3">
-          {/* Make a array map here  */}
-          <div className="w-80 space-y-2">
-            <img src="/Project1.png" alt="" className="w-full" />
-            <h3 className="text-lg font-semibold">Project Name</h3>
-            <span className="text-sm">Tech Used</span>
-          </div>
+        <div className="my-8 md:grid grid-cols-3 gap-6">
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
+            return (
+              <div className="w-80 space-y-2" key={index}>
+                <img src="/Project1.png" alt="" className="w-full" />
+                <h3 className="text-lg font-semibold">Project Name</h3>
+                <span className="text-sm">Tech Used</span>
+              </div>
+            );
+          })}
         </div>
       </section>
       <Contact />
