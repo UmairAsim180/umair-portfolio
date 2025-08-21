@@ -25,7 +25,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: "Umair Asim - Web Developer",
+  title: "Umair Asim | Portfolio",
   description: "Umair Asim's Portfolio - Web Developer ",
 };
 

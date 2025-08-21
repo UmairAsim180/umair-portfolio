@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col justify-center items-center space-y-4 my-8">
                 <h2 className="anim text-center dark:text-white text-5xl font-extrabold">Umair Asim</h2>
-                <span className="anim mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+                <span className="anim mt-3 text-2xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Web Developer
                 </span>
                 <span className="anim text-center my-8">As a passionate data scientist, with expertise in machine learning, AI, and data analytics, I thrive on the challenges of exploring complex data landscapes and uncovering meaningful patterns that drive innovation</span>

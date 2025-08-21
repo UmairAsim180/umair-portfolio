@@ -7,22 +7,22 @@ const Projects = () => {
     gsap.registerPlugin(ScrollTrigger);
     const projects = [{ title: "Project 1", description: "Description for project 1", image: "/Projects/project1.png", repoLink: "https://github.com/username/project1", liveLink: "https://username.github.io/project1" }, { title: "Project 2", description: "Description for project 2", image: "/Projects/project1.png", repoLink: "https://github.com/username/project2", liveLink: "https://username.github.io/project2" }, { title: "Project 3", description: "Description for project 3", image: "/Projects/project1.png", repoLink: "https://github.com/username/project3", liveLink: "https://username.github.io/project3" }]
     const projectRef = useRef()
+    const projectWrapperRef = useRef()
 
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.fromTo(
-                projectRef.current,
-                { xPercent:100 },     // <--- start from Project 1 always
+            gsap.to(
+                projectRef.current,    // <--- start from Project 1 always
                 {
-                    xPercent: -50,
+                    xPercent: -100,
                     ease: "none",
                     scrollTrigger: {
                         trigger: projectRef.current,
                         start: "top 30%",
-                        end: "bottom 20%",
+                        end: "+=3000", // scroll distance
                         scrub: 1,
-                        pin: projectRef.current.parentElement,
+                        pin: projectWrapperRef.current,
                         // markers: true,
                     }
                 }
@@ -33,25 +33,26 @@ const Projects = () => {
         };
     }, []);
     return (
-        <section id="projects" className=" m-auto px-8 font-poppins my-10 flex flex-col justify-start items-center relative p-6 overflow-x-hidden">
-            <h2 className="text-center dark:text-white text-4xl font-extrabold">Projects</h2>
-            <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+        <section ref={projectWrapperRef} id="projects" className=" m-auto px-8 font-poppins my-10 flex flex-col justify-start items-center relative p-6 overflow-x-hidden">
+            <h2 className="text-center dark:text-white text-5xl font-extrabold">Projects</h2>
+            <span className="mt-3 text-2xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Some of My Work
             </span>
-            <div ref={projectRef} className=" gap-8 m-8 flex w-[200%]">
-                {projects.map((project, index) => {
-                    return (
+            <div className="relative w-full overflow-hidden mt-8">
+                <div ref={projectRef} className="flex gap-8 w-max">
+                    {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 w-[600px] h-[400px]"
+                            className="flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 w-[600px] h-[400px] shrink-0 m-2"
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
                             <h2>{project.title}</h2>
                             <p>{project.description}</p>
                         </div>
-                    );
-                })}
+                    ))}
+                </div>
             </div>
+
         </section>
     );
 }

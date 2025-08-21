@@ -53,8 +53,8 @@ const About = () => {
     }, [])
     return (
         <section ref={aboutRef} id="about" className="lg:w-[60%] m-auto font-poppins my-10 flex flex-col justify-start items-center relative p-6">
-            <h2 className="text-center dark:text-white text-4xl font-extrabold">About</h2>
-            <span className="mt-3 text-xl text-center font-bold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+            <h2 className="text-center dark:text-white text-5xl font-extrabold">About</h2>
+            <span className="mt-3 text-2xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Get to Know About us
             </span>
             <p className="my-8 text-center">
