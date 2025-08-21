@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner";
 import Provider from "./Provider";
-import LoaderWrapper from "@/Components/loaderWrapper";
+import LoaderWrapper from "@/Components/LoaderWrapper";
 
 
 const oleoscript = Oleo_Script({
