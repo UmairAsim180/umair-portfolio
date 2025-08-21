@@ -3,6 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner";
 import Provider from "./Provider";
+import LoaderWrapper from "@/Components/loaderWrapper";
 
 
 const oleoscript = Oleo_Script({
@@ -32,15 +33,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <Analytics />
-      <html lang="en" suppressHydrationWarning>
 
+      <Analytics />
+      <html lang="en">
         <Provider>
           <body className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} antialiased bg-[#E0E8F6] text-[#484E53] dark:bg-[#1E1E1E] dark:text-[#E1E1E1]`}>
-            {children}
-            <Toaster />
+            <LoaderWrapper>
+              {children}
+              <Toaster />
+            </LoaderWrapper>
           </body>
-        </Provider> 
+
+
+        </Provider>
 
       </html>
     </>
