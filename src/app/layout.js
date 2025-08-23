@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
       <Analytics />
       <html lang="en">
         <Provider>
-          <body className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} antialiased bg-[#E0E8F6] text-[#484E53] dark:bg-[#1E1E1E] dark:text-[#E1E1E1]`}>
+          <body className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} antialiased bg-[#E0E8F6] text-[#484E53] dark:bg-[#1E1E1E] dark:text-[#E1E1E1] font-poppins`}>
             <LoaderWrapper>
               {children}
               <Toaster />

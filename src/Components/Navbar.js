@@ -35,9 +35,9 @@ const Navbar = () => {
         };
     }, [])
     return (
-        <nav ref={navRef} className="flex p-8 md:justify-evenly justify-between items-center w-full overflow-x-hidden">
+        <nav ref={navRef} className="flex p-8 md:justify-evenly justify-between items-center w-full overflow-x-hidden font-inter">
             <span className="font-script font-bold text-2xl">Umair</span>
-            <ul className="md:flex gap-5 hidden font-inter">
+            <ul className="md:flex gap-5 hidden">
                 {["Home", "About", "Projects", "Services", "Resume"].map((item, i) => (
                     <li
                         key={i}

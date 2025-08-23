@@ -33,7 +33,7 @@ const Projects = () => {
         };
     }, []);
     return (
-        <section ref={projectWrapperRef} id="projects" className=" m-auto px-8 font-poppins my-10 flex flex-col justify-start items-center relative p-6 overflow-x-hidden">
+        <section ref={projectWrapperRef} id="projects" className=" m-auto px-8 font-montserrat my-10 flex flex-col justify-start items-center relative p-6 overflow-x-hidden">
             <h2 className="text-center dark:text-white md:text-5xl text-4xl font-extrabold">Projects</h2>
             <span className="mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Some of My Work
@@ -43,7 +43,7 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 w-[600px] h-[400px] shrink-0 m-2"
+                            className="flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 md:w-[600px] w-[80vw] md:h-[400px] aspect-video shrink-0 m-2"
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
                             <h2>{project.title}</h2>

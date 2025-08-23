@@ -52,7 +52,7 @@ const About = () => {
         };
     }, [])
     return (
-        <section ref={aboutRef} id="about" className="lg:w-[60%] m-auto font-poppins my-10 flex flex-col justify-start items-center relative p-6">
+        <section ref={aboutRef} id="about" className="lg:w-[60%] m-auto font-montserrat my-10 flex flex-col justify-start items-center relative p-6">
             <h2 className="text-center dark:text-white md:text-5xl text-4xl font-extrabold">About</h2>
             <span className="mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Get to Know About us
@@ -67,12 +67,12 @@ const About = () => {
 
             <TailwindBtn text={'Download Resume'} cssClass="w-fit" />
             {/* {Stats in About Section} */}
-            <div className="stat grid md:grid-cols-3 gap-4 my-8 ">
+            <div className="stat grid grid-cols-3 gap-4 my-8 ">
                 {stat.map((item, index) => {
                     return (
-                        <div key={index} className="text-center border border-zinc-500 rounded-md p-5 space-y-2">
-                            <span data-count={item.value} className="count-up text-5xl font-bold text-[#5fabb9]">0</span><span className="count-up text-5xl font-bold text-[#5fabb9]">+</span>
-                            <p className="text-lg">{item.label}</p>
+                        <div key={index} className="text-center border border-zinc-500 rounded-md md:p-5 p-3 space-y-2">
+                            <span data-count={item.value} className="count-up md:text-5xl text-3xl font-bold text-[#5fabb9]">0</span><span className="count-up md:text-5xl text-3xl font-bold text-[#5fabb9]">+</span>
+                            <p className="md:text-lg text-xs">{item.label}</p>
                         </div>
                     );
                 })}

@@ -13,7 +13,7 @@ export default function Loader({ onComplete }) {
     tl.fromTo(
       loaderRef.current,
       { opacity: 1 },
-      { opacity: 0, duration: 1, delay: 1 } // stays for 1s, fades in 1s
+      { opacity: 0,scale:10, duration: 1, delay: 1 } // stays for 1s, fades in 1s
     );
   }, [onComplete]);
 
@@ -22,7 +22,7 @@ export default function Loader({ onComplete }) {
       ref={loaderRef}
       className="fixed inset-0 flex items-center justify-center bg-black text-white z-[9999]"
     >
-      <h1 className="text-4xl font-bold">Hello 👋</h1>
+      <h1 className="text-4xl font-bold font-script">Hello 👋</h1>
     </div>
   );
 }

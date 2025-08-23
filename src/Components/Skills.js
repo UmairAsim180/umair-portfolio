@@ -33,17 +33,17 @@ const Skills = () => {
         };
     }, [])
     return (
-        <section ref={skillRef} className="techStack lg:w-[60%] m-auto font-poppins my-10 relative p-6">
+        <section ref={skillRef} className="techStack lg:w-[60%] m-auto font-montserrat my-10 relative p-6">
             <h2 className="text-center dark:text-white text-4xl md:text-5xl font-extrabold">My Skills</h2>
 
             <div className="my-8 p-4">
                 <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Language and Tools
                 </span>
-                <div className="fade-left flex flex-wrap gap-4 pl-10 my-4">
+                <div className="fade-left flex flex-wrap gap-4 md:pl-10 my-4">
                     {skills.Languages.map((item, index) => {
                         return (
-                            <div key={index} className="items-center space-x-2 flex flex-col size-14">
+                            <div key={index} className="items-center space-x-2 flex flex-col md:size-14 size-12">
                                 <img src={item.icon} alt={item.text} className="" />
                             </div>
                         )
@@ -54,10 +54,10 @@ const Skills = () => {
                 <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Libraries and Frameworks
                 </span>
-                <div className="fade-left flex flex-wrap gap-4 pl-10 my-4">
+                <div className="fade-left flex flex-wrap gap-4 md:pl-10 my-4">
                     {skills.Frameworks.map((item, index) => {
                         return (
-                            <div key={index} className="items-center space-x-2 flex flex-col size-14">
+                            <div key={index} className="items-center space-x-2 flex flex-col md:size-14 size-12">
                                 <img src={item.icon} alt={item.text} className="" />
                             </div>
                         )
@@ -68,10 +68,10 @@ const Skills = () => {
                 <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Databases and Others
                 </span>
-                <div className="flex flex-wrap gap-4 pl-10 my-4">
+                <div className="flex flex-wrap gap-4 md:pl-10 my-4">
                     {skills.Databases.map((item, index) => {
                         return (
-                            <div key={index} className="fade-left items-center space-x-2 flex flex-col size-14">
+                            <div key={index} className="fade-left items-center space-x-2 flex flex-col md:size-14 size-12">
                                 <img src={item.icon} alt={item.text} className="" />
                             </div>
                         )
