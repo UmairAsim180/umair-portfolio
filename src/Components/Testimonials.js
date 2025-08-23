@@ -37,8 +37,8 @@ export function Testimonials() {
     return (
         <>
             <section className="testimonial m-auto font-poppins my-10 flex flex-col justify-start items-center relative p-6">
-                <h2 className="text-center dark:text-white text-5xl font-extrabold">Testimonials</h2>
-                <span className="mt-3 text-2xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+                <h2 className="text-center dark:text-white md:text-5xl text-4xl font-extrabold">Testimonials</h2>
+                <span className="mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     What People Say
                 </span>
                 <Carousel
@@ -50,13 +50,13 @@ export function Testimonials() {
                             delay: 2000,
                         }),
                     ]}
-                    className="lg:w-[60vw] p-10"
+                    className="lg:w-[60vw] w-screen p-10"
                 >
                     <CarouselContent className="p-5">
                         {testimonials.map((testimonial) => (
                             <CarouselItem
                                 key={testimonial.id}
-                                className="border h-64 flex flex-col justify-evenly items-start border-white rounded-md bg-[#3232322e] backdrop-blur-md basis-1/2 p-5 m-2"
+                                className="border h-64 flex flex-col justify-evenly items-start border-white rounded-md bg-[#3232322e] backdrop-blur-md md:basis-1/2 p-5 m-8"
                             >
                                 <div className="flex items-center gap-3">
                                     <img className="rounded-full size-10" src={testimonial.avatar} alt={testimonial.name} />
@@ -71,8 +71,6 @@ export function Testimonials() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
                 </Carousel>
             </section>
 

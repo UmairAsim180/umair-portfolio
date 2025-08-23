@@ -39,8 +39,8 @@ const Contact = () => {
 
     return (
         <section className="md:w-[60%] min-h-[80vh] m-auto font-poppins mt-10 flex flex-col justify-start items-center relative p-6">
-            <h2 className="text-center text-5xl font-extrabold">Get in Touch</h2>
-            <span className="mt-3 text-2xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+            <h2 className="text-center text-4xl md:text-5xl font-extrabold">Get in Touch</h2>
+            <span className="mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Let us Work Together
             </span>
             <form

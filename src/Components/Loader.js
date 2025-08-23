@@ -13,7 +13,7 @@ export default function Loader({ onComplete }) {
     tl.fromTo(
       loaderRef.current,
       { opacity: 1 },
-      { opacity: 0, duration: 1.5, delay: 1 } // stays for 1s, fades in 1.5s
+      { opacity: 0, duration: 1, delay: 1 } // stays for 1s, fades in 1s
     );
   }, [onComplete]);
 

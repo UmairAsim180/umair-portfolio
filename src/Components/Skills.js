@@ -34,10 +34,10 @@ const Skills = () => {
     }, [])
     return (
         <section ref={skillRef} className="techStack lg:w-[60%] m-auto font-poppins my-10 relative p-6">
-            <h2 className="text-center dark:text-white text-5xl font-extrabold">My Skills</h2>
+            <h2 className="text-center dark:text-white text-4xl md:text-5xl font-extrabold">My Skills</h2>
 
             <div className="my-8 p-4">
-                <span className="mt-3 text-2xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+                <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Language and Tools
                 </span>
                 <div className="fade-left flex flex-wrap gap-4 pl-10 my-4">
@@ -51,7 +51,7 @@ const Skills = () => {
                 </div>
             </div>
             <div className="my-8 p-4">
-                <span className="mt-3 text-2xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+                <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Libraries and Frameworks
                 </span>
                 <div className="fade-left flex flex-wrap gap-4 pl-10 my-4">
@@ -65,7 +65,7 @@ const Skills = () => {
                 </div>
             </div>
             <div className="my-8 p-4">
-                <span className="mt-3 text-2xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
+                <span className="mt-3 md:text-2xl text-xl font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                     Databases and Others
                 </span>
                 <div className="flex flex-wrap gap-4 pl-10 my-4">

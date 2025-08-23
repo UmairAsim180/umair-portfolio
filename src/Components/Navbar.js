@@ -5,6 +5,7 @@ import React from 'react'
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
+// import Link from "next/link";
 
 const Navbar = () => {
     const navRef = useRef()
@@ -34,7 +35,7 @@ const Navbar = () => {
         };
     }, [])
     return (
-        <nav ref={navRef} className="flex p-8 md:justify-evenly justify-between items-center">
+        <nav ref={navRef} className="flex p-8 md:justify-evenly justify-between items-center w-full overflow-x-hidden">
             <span className="font-script font-bold text-2xl">Umair</span>
             <ul className="md:flex gap-5 hidden font-inter">
                 {["Home", "About", "Projects", "Services", "Resume"].map((item, i) => (
@@ -53,7 +54,9 @@ const Navbar = () => {
                 ))}
             </ul>
             <div className="md:flex hidden justify-center items-center gap-5">
-                <TailwindBtn text='Contact Us' />
+                {/* <a href="#contact"> */}
+                    <TailwindBtn text='Contact Me' />
+                {/* </a> */}
                 <ModeToggle />
             </div>
             <Sidebar />
