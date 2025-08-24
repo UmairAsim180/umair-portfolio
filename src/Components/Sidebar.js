@@ -18,16 +18,16 @@ const Sidebar = () => {
             />
 
             {/* Overlay */}
-            {isOpen && (
+            {/* {isOpen && (
                 <div
                     className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
                     onClick={() => setIsOpen(false)}
                 />
-            )}
+            )} */}
 
             {/* Sidebar */}
             <aside
-                className={`fixed rounded-s-lg  top-0 right-0 w-72 h-full bg-[#e0e8f6] border border-black dark:bg-[#1e1e1e] dark:border-white shadow-xl z-50 transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed rounded-s-lg  top-0 right-0 w-72 h-screen bg-[#e0e8f6] border border-black dark:bg-[#1e1e1e] dark:border-white shadow-xl z-[100] transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
                 {/* Header */}
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <nav className="flex flex-col gap-4 px-6 py-6 text-base text-gray-700 dark:text-gray-300">
+                <nav className="flex flex-col gap-4 text-base text-gray-700 dark:text-gray-300">
                     {['Home', 'About', 'Projects', 'Services'].map((item) => (
                         <a
                             key={item}
