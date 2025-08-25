@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { TailwindBtn } from './TailwindBtn'
 import { useLayoutEffect } from 'react'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 const Hero = () => {
   const heroRef = useRef()
@@ -33,9 +34,9 @@ const Hero = () => {
   }, [])
   return (
     <section ref={heroRef} id="home" className=" lg:w-[60%] min-h-[80vh] m-auto  mt-10 flex flex-col font-montserrat justify-center relative p-3">
-      <img className="anim absolute inset-0 h-full w-full [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block" src="/Grid.png" alt="" />
+      <Image className="anim absolute inset-0  [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block" src="/Grid.png" alt="Grid" fill />
       <div className="anim avatar w-full">
-        <img src="/Avatar.png" className="m-auto" alt="" />
+        <Image src="/Avatar.png" className="m-auto" alt="Avatar" width={200} height={200} />
       </div>
       <div className="flex flex-col justify-center items-center space-y-4 my-8">
         <h2 className="anim text-center dark:text-white md:text-5xl text-4xl font-extrabold font-montserrat">Umair Asim</h2>
