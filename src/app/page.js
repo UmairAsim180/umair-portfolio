@@ -1,9 +1,6 @@
 "use client";
 import Contact from "@/Components/Contact";
-// import { TailwindBtn } from "@/Components/TailwindBtn";
 import gsap from "gsap";
-import { Star, Sun } from "lucide-react";
-import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "@/Components/Navbar";
 import Hero from "@/Components/Hero";
@@ -13,24 +10,24 @@ import Projects from "@/Components/Projects";
 import Services from "@/Components/Services";
 import { Testimonials } from "@/Components/Testimonials";
 import ScrollProgress from "@/Components/scrollProgress";
+import Sidebar from "@/Components/Sidebar";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 
 export default function Home() {
-  //Data Arrays for mapping
-  const stat = [
-    { value: "5+", label: "Years of Experience" },
-    { value: "100+", label: "Projects Completed" },
-    { value: "50+", label: "Happy Clients" },
-  ];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-    <ScrollProgress/>
+      <ScrollProgress />
       {/** Navigation Bar */}
-      <Navbar />
+      <div className="relative">
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
       {/* Hero Section */}
       <Hero />
       {/* About Section */}

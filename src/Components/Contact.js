@@ -44,7 +44,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="md:w-[60%] min-h-[80vh] m-auto font-montserrat mt-10 flex flex-col justify-start items-center relative">
+        <section id='contact' className="md:w-[60%] min-h-[80vh] m-auto font-montserrat mt-10 flex flex-col justify-start items-center relative">
             <h2 className="text-center text-4xl md:text-5xl font-extrabold">Get in Touch</h2>
             <span className="mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
                 Let us Work Together
@@ -59,7 +59,7 @@ const Contact = () => {
                 <input onChange={handleChange} value={form.email} type="email" id="email" className="border border-zinc-500 rounded-md p-3 bg-transparent" required placeholder="Your Email" />
                 <label className="font-bold" htmlFor="message" >Message</label>
                 <textarea onChange={handleChange} value={form.message} id="message" className="border border-zinc-500 rounded-md p-3 bg-transparent" required placeholder="Your Message" rows="5"></textarea>
-                <TailwindBtn   text={loading ? "Sending..." : "Send Message"} cssClass={`w-full`} type="submit" disabled={loading} />
+                <TailwindBtn   text={loading ? "Sending..." : "Send Message"} cssClass={`w-full`} type="submit" isLoading={loading} isDisabled={loading} />
             </form>
         </section>
     )

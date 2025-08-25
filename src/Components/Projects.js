@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { Code, Link } from 'lucide-react'
 import React, { useRef } from 'react'
 import { useLayoutEffect } from 'react'
 
@@ -43,9 +44,13 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 md:w-[600px] w-[80vw] md:h-[400px] aspect-video shrink-0 m-2"
+                            className="relative flex flex-col justify-between bg-cover bg-center rounded-lg p-5 text-white space-y-2 md:w-[600px] w-[80vw] md:h-[400px] aspect-video m-2 "
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
+                            <div className="links absolute inset-0 flex justify-center items-center gap-5 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-[#ffffff82] dark:bg-[#00000080]">
+                                <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full"><Code/></a>
+                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full"><Link/></a>
+                            </div>
                             <h2>{project.title}</h2>
                             <p>{project.description}</p>
                         </div>

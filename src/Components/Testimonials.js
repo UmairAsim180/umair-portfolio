@@ -58,7 +58,7 @@ export function Testimonials() {
                                 key={testimonial.id}
                                 className="md:basis-2/3 basis-full px-2"
                             >
-                                <div className="border h-64  flex flex-col justify-evenly items-start border-white rounded-md bg-[#3232322e] backdrop-blur-md p-5">
+                                <div className="border h-64  flex flex-col justify-evenly items-start border-black dark:border-white rounded-md dark:bg-[#3232322e] bg-white backdrop-blur-md p-5">
                                     <div className="flex items-center gap-3">
                                         <img className="rounded-full size-10" src={testimonial.avatar} alt={testimonial.name} />
                                         <span className="text-sm font-semibold">{testimonial.name}</span>

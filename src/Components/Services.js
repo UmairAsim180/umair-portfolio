@@ -30,7 +30,7 @@ const Services = () => {
 
             <div className="md:grid md:grid-cols-3 flex flex-col gap-4 my-8">
 
-                <div className="service-card border border-zinc-500 rounded-md col-start-1 p-5 space-y-4 relative bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="service-card border border-zinc-500 rounded-md col-start-1 p-5 space-y-4 relative bg-gradient-to-br dark:from-zinc-700 dark:to-zinc-800 from-white to-[#a9d9e2]">
                     <div className="dark:bg-white bg-[#BCE7FA] rounded-md size-10 flex justify-center items-center">
                         <Sun className="text-black" />
                     </div>
@@ -40,7 +40,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="service-card border border-zinc-500 rounded-md col-start-2 p-5 space-y-4 relative bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="service-card border border-zinc-500 rounded-md col-start-2 p-5 space-y-4 relative bg-gradient-to-br dark:from-zinc-700 dark:to-zinc-800 from-white to-[#a9d9e2]">
                     <div className="dark:bg-white bg-[#BCE7FA] rounded-md size-10 flex justify-center items-center">
                         <Sun className="text-black" />
                     </div>
@@ -49,7 +49,7 @@ const Services = () => {
                         I build scalable and secure backend systems with Node.js, Express.js, and MongoDB, providing strong APIs and efficient data handling.
                     </p>
                 </div>
-                <div className="service-card border border-zinc-500 rounded-md col-start-3 p-5 space-y-4 relative bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="service-card border border-zinc-500 rounded-md col-start-3 p-5 space-y-4 relative bg-gradient-to-br dark:from-zinc-700 dark:to-zinc-800 from-white to-[#a9d9e2]">
                     <div className="dark:bg-white bg-[#BCE7FA] rounded-md size-10 flex justify-center items-center">
                         <Sun className="text-black" />
                     </div>
@@ -59,7 +59,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="service-card border border-zinc-500 rounded-md col-span-2 col-start-1 row-start-2 p-5 space-y-4 relative bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="service-card border border-zinc-500 rounded-md col-span-2 col-start-1 row-start-2 p-5 space-y-4 relative bg-gradient-to-br dark:from-zinc-700 dark:to-zinc-800 from-white to-[#a9d9e2]">
                     <div className="dark:bg-white bg-[#BCE7FA] rounded-md size-10 flex justify-center items-center">
                         <Sun className="text-black" />
                     </div>
@@ -69,7 +69,7 @@ const Services = () => {
                         Whether its a portfolio, business site, or web app, I make it modern, responsive, and fast.
                     </p>
                 </div>
-                <div className="service-card border border-zinc-500 rounded-md col-start-3 row-start-2 p-5 space-y-4 relative bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="service-card border border-zinc-500 rounded-md col-start-3 row-start-2 p-5 space-y-4 relative bg-gradient-to-br dark:from-zinc-700 dark:to-zinc-800 from-white to-[#a9d9e2]">
                     <div className="dark:bg-white bg-[#BCE7FA] rounded-md size-10 flex justify-center items-center">
                         <Sun className="text-black" />
                     </div>
