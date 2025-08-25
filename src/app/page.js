@@ -1,6 +1,5 @@
 "use client";
 // Normal Imports 
-import dynamic from "next/dynamic";
 import Contact from "@/Components/Contact";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
