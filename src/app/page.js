@@ -1,4 +1,5 @@
 "use client";
+// Normal Imports 
 import Contact from "@/Components/Contact";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,12 +7,13 @@ import Navbar from "@/Components/Navbar";
 import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Skills from "@/Components/Skills";
-import Projects from "@/Components/Projects";
 import Services from "@/Components/Services";
 import { Testimonials } from "@/Components/Testimonials";
 import ScrollProgress from "@/Components/scrollProgress";
 import Sidebar from "@/Components/Sidebar";
 import { useState } from "react";
+// Lazy Load 
+const Projects = dynamic(() => import("@/Components/Projects"));
 
 gsap.registerPlugin(ScrollTrigger);
 

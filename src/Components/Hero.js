@@ -34,7 +34,7 @@ const Hero = () => {
   }, [])
   return (
     <section ref={heroRef} id="home" className=" lg:w-[60%] min-h-[80vh] m-auto  mt-10 flex flex-col font-montserrat justify-center relative p-3">
-      <Image className="anim absolute inset-0  [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block" src="/Grid.png" alt="Grid" fill />
+      <Image className="anim absolute inset-0  [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block" src="/Grid.png" alt="Grid" fill priority/>
       <div className="anim avatar w-full">
         <Image src="/Avatar.png" className="m-auto" alt="Avatar" width={200} height={200} />
       </div>
