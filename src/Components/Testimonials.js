@@ -9,6 +9,7 @@ import {
     CarouselPrevious,
 } from "@/Components/ui/carousel"
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 export function Testimonials() {
     const testimonials = [
@@ -60,7 +61,7 @@ export function Testimonials() {
                             >
                                 <div className="border h-64  flex flex-col justify-evenly items-start border-black dark:border-white rounded-md dark:bg-[#3232322e] bg-white backdrop-blur-md p-5">
                                     <div className="flex items-center gap-3">
-                                        <img className="rounded-full size-10" src={testimonial.avatar} alt={testimonial.name} />
+                                        <Image className="rounded-full" src={testimonial.avatar} alt={testimonial.name} height={40} width={40} />
                                         <span className="text-sm font-semibold">{testimonial.name}</span>
                                     </div>
                                     <div className="rating">

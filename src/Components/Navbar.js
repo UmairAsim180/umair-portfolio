@@ -4,8 +4,9 @@ import React from 'react'
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
-const Navbar = ({setIsOpen, isOpen}) => {
+const Navbar = ({ setIsOpen, isOpen }) => {
     const navRef = useRef()
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -38,17 +39,16 @@ const Navbar = ({setIsOpen, isOpen}) => {
             <span className="font-script font-bold text-2xl">Umair</span>
             <ul className="md:flex gap-5 hidden">
                 {["Home", "About", "Projects", "Services", "Resume"].map((item, i) => (
-                    <li
-                        key={i}
-                        onClick={() => {
-                            const section = document.querySelector(`#${item.toLowerCase()}`);
-                            if (section) {
-                                section.scrollIntoView({ behavior: "smooth" });
-                            }
-                        }}
-                        className="nav-item text-lg font-semibold cursor-pointer hover:text-[#5fabb9] hover:scale-x-105"
-                    >
-                        {item}
+                    <li key={i} className="nav-item">
+                        <a
+                            href={`#${item.toLowerCase()}`}
+                            className="text-lg font-semibold p-2
+                   hover:text-[#5fabb9] hover:scale-105
+                   focus-visible:text-[#5fabb9] focus-visible:ring-2 focus-visible:ring-[#5fabb9] focus-visible:rounded
+                   transition-all duration-300"
+                        >
+                            {item}
+                        </a>
                     </li>
                 ))}
             </ul>
@@ -66,7 +66,7 @@ const Navbar = ({setIsOpen, isOpen}) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 md:hidden bg-black text-white rounded"
             >
-                <img className="size-6" src="/menu.svg" alt="Menu" />
+                <Image src="/menu.svg" alt="Menu" height={24} width={24} />
             </button>
 
         </nav>

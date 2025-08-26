@@ -12,9 +12,11 @@ import { Testimonials } from "@/Components/Testimonials";
 import ScrollProgress from "@/Components/scrollProgress";
 import Sidebar from "@/Components/Sidebar";
 import { useState } from "react";
-import dynamic from "next/dynamic";
+import Projects from "@/Components/Projects";
+import Image from "next/image";
+// import dynamic from "next/dynamic";
 // Lazy Load 
-const Projects = dynamic(() => import("@/Components/Projects"));
+// const Projects = dynamic(() => import("@/Components/Projects") , { ssr: false });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +26,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className="dark:bg-[#1E1E1E] dark:text-[#E1E1E1]">
       <ScrollProgress />
       {/** Navigation Bar */}
       <div className="relative">
@@ -56,20 +58,20 @@ export default function Home() {
           </span>
           <ul className="flex gap-4">
             <li className="cursor-pointer border rounded-full p-1 border-black dark:border-white">
-              <img className="size-6 dark:invert" src="/Facebook.svg" alt="Facebook" />
+              <Image className="dark:invert" src="/Facebook.svg" alt="Facebook" height={24} width={24} />
             </li>
             <li className="cursor-pointer border rounded-full p-1 border-black dark:border-white">
-              <a href="https://www.fiverr.com/umairasim_1?source=gig_page">
-                <img className="size-6 dark:invert" src="/Fiverr.svg" alt="Fiverr" />
+              <a href="https://www.fiverr.com/umairasim_1?source=gig_page" rel="noopener noreferrer" target="_blank">
+                <Image className="dark:invert" src="/Fiverr.svg" alt="Fiverr" height={24} width={24} />
               </a>
             </li>
             <li className="cursor-pointer border rounded-full p-1 border-black dark:border-white">
-              <img className="size-6 dark:invert" src="/Linkedin.svg" alt="Linkedin" />
+              <Image className="dark:invert" src="/Linkedin.svg" alt="Linkedin" height={24} width={24} />
             </li>
           </ul>
         </div>
       </footer>
 
-    </>
+    </div>
   );
 }

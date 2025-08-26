@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import React, { useRef } from 'react'
 import { useLayoutEffect } from 'react'
+import Image from 'next/image'
 
 const Skills = () => {
     const skills = {
@@ -44,7 +45,7 @@ const Skills = () => {
                     {skills.Languages.map((item, index) => {
                         return (
                             <div key={index} className="items-center space-x-2 flex flex-col md:size-14 size-12">
-                                <img src={item.icon} alt={item.text} className="" />
+                                <Image src={item.icon} alt={item.text} height={45} width={45} />
                             </div>
                         )
                     })}
@@ -58,7 +59,7 @@ const Skills = () => {
                     {skills.Frameworks.map((item, index) => {
                         return (
                             <div key={index} className="items-center space-x-2 flex flex-col md:size-14 size-12">
-                                <img src={item.icon} alt={item.text} className="" />
+                                <Image src={item.icon} alt={item.text} height={45} width={45} />
                             </div>
                         )
                     })}
@@ -72,7 +73,7 @@ const Skills = () => {
                     {skills.Databases.map((item, index) => {
                         return (
                             <div key={index} className="fade-left items-center space-x-2 flex flex-col md:size-14 size-12">
-                                <img src={item.icon} alt={item.text} className="" />
+                                <Image src={item.icon} alt={item.text} height={45} width={45} />
                             </div>
                         )
                     })}

@@ -8,7 +8,7 @@ const Hero = () => {
   const heroRef = useRef()
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let tl = gsap.timeline()
+      let tl = gsap.timeline({delay:0.2})
       tl.from(heroRef.current, {
         y: -100,
         opacity: 0,
@@ -19,7 +19,7 @@ const Hero = () => {
         tl.from(item, {
           scale: 0.5,
           opacity: 0,
-          duration: 0.6,
+          duration: 0.3,
           ease: "power2.out",
           stagger: 0.3,
         })
@@ -34,7 +34,7 @@ const Hero = () => {
   }, [])
   return (
     <section ref={heroRef} id="home" className=" lg:w-[60%] min-h-[80vh] m-auto  mt-10 flex flex-col font-montserrat justify-center relative p-3">
-      <Image className="anim absolute inset-0  [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block" src="/Grid.png" alt="Grid" fill priority/>
+      <div className={`absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)] md:rounded-full opacity-30 invert z-[-1] hidden md:block bg-[url("/Grid.png")]`}></div>
       <div className="anim avatar w-full">
         <Image src="/Avatar.png" className="m-auto" alt="Avatar" width={200} height={200} />
       </div>
