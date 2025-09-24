@@ -43,7 +43,8 @@ const Hero = () => {
         <span className="anim mt-3 md:text-2xl text-xl text-center font-semibold bg-gradient-to-r from-[#5fabb9] to-[#6e6e6e] dark:to-[#d9d9d9] text-transparent bg-clip-text w-fit">
           Web Developer
         </span>
-        <span className="anim text-center my-8">As a passionate data scientist, with expertise in machine learning, AI, and data analytics, I thrive on the challenges of exploring complex data landscapes and uncovering meaningful patterns that drive innovation</span>
+        <span className="anim text-center my-8">As a Software Engineering student with a passion for frontend development, I enjoy building modern, responsive, and engaging web applications that bring ideas to life.</span>
+        <span className="anim text-center my-8 font-semibold text-lg">“Exploring code, design, and everything in between.”</span>
         <TailwindBtn onClick={() => {
           const section = document.querySelector(`#contact`);
           if (section) {

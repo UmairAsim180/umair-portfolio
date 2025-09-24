@@ -26,13 +26,14 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="dark:bg-[#1E1E1E] dark:text-[#E1E1E1]">
+    <div className="dark:bg-[#1E1E1E] dark:text-[#E1E1E1] bg-[#E0E8F6] text-[#484E53]">
       <ScrollProgress />
       {/** Navigation Bar */}
       <div className="relative">
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
+
       {/* Hero Section */}
       <Hero />
       {/* About Section */}
@@ -66,7 +67,9 @@ export default function Home() {
               </a>
             </li>
             <li className="cursor-pointer border rounded-full p-1 border-black dark:border-white">
-              <Image className="dark:invert" src="/Linkedin.svg" alt="Linkedin" height={24} width={24} />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/umair-asim-4b729b343">
+                <Image className="dark:invert" src="/Linkedin.svg" alt="Linkedin" height={24} width={24} />
+              </a>
             </li>
           </ul>
         </div>

@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
       <head>
         <Analytics />
       </head>
-      <body className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} antialiased bg-[#E0E8F6] text-[#484E53] font-poppins`} suppressHydrationWarning={true}>
+      <body className={`${oleoscript.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} antialiased font-poppins`} suppressHydrationWarning={true}>
         <Provider>
           <LoaderWrapper>
             {children}
