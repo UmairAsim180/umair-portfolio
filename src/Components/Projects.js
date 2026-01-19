@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Projects = () => {
     gsap.registerPlugin(ScrollTrigger);
-    const projects = [{ title: "Weather App", description: "A weather application that provides real-time weather updates.", image: "/Projects/weather.png", repoLink: "https://github.com/UmairAsim180/weather-app/", liveLink: "https://weather-app-six-rosy-90.vercel.app/" }, { title: "Resumint (UNDER CONSTRUCTION)", description: "A web application that helps users create professional resumes using AI.", image: "/Projects/resumint.png", repoLink: "https://github.com/username/project2", liveLink: "https://username.github.io/project2" }, { title: "Project 3", description: "Description for project 3", image: "/Projects/project1.png", repoLink: "https://github.com/username/project3", liveLink: "https://username.github.io/project3" }]
+    const projects = [{ title: "Weather App", description: "A weather application that provides real-time weather updates.", image: "/Projects/weather.png", repoLink: "https://github.com/UmairAsim180/weather-app/", liveLink: "https://weather-app-six-rosy-90.vercel.app/" }, { title: "Interactive 3D: Porsche", description: "An interactive 3D model of a Porsche 911, built with Three.js.", image: "/Projects/porsche.png", repoLink: "https://github.com/UmairAsim180/porsche-landing-page", liveLink: "https://porsche-gt3.vercel.app" }, { title: "Project 3", description: "Description for project 3", image: "/Projects/project1.png", repoLink: "https://github.com/username/project3", liveLink: "https://username.github.io/project3" }]
     const projectRef = useRef()
     const projectWrapperRef = useRef()
 
@@ -49,8 +49,8 @@ const Projects = () => {
                         >
                             <Image src={project.image} alt={project.title} layout="fill" className="absolute rounded-lg object-cover -z-10 inset-0" />
                             <div className="links absolute inset-0 flex justify-center items-center gap-5 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-[#ffffff82] dark:bg-[#00000080] rounded-lg">
-                                <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full hover:scale-110 transition-all"><Code/></a>
-                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full hover:scale-110 transition-all"><Link/></a>
+                                <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full hover:scale-110 transition-all"><Code /></a>
+                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-white text-black p-8 rounded-full hover:scale-110 transition-all"><Link /></a>
                             </div>
                             <h2 className='font-semibold text-lg bg-black bg-opacity-25 p-2 rounded-md'>{project.title}</h2>
                             <p className=' bg-black bg-opacity-25 p-2 rounded-md'>{project.description}</p>
